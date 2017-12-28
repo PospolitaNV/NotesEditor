@@ -18,7 +18,13 @@ public class User {
         notesData.add(new Note("Title2", "Body2"));
         notesData.add(new Note("Title3", "Body3"));
     }
-
+    
+    /**
+    * Нужен метод addNote(Note note) {}
+    * т.к. можно сломать систему сделав getNotesData() = null
+    * В итогде User.getNotesData() после этого будет возвращать null.
+    **/
+    
     public ObservableList<Note> getNotesData() {
         return notesData;
     }
